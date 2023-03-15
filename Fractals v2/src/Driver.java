@@ -27,10 +27,10 @@ public class Driver extends JPanel implements ActionListener {
 	}// end of paint method - put code above for anything dealing with drawing -
 	public void rings(Graphics g, int radius, int x, int y) {
 		// each method call draws one part of the fractal
-		g.drawOval(x, y, radius, radius);
-		if(x != 350) {
-			rings(g, radius, x+10, y-10 );
-		}
+//		g.drawOval(x, y, radius, radius);
+//		if(x != 350) {
+//			rings(g, radius, x+10, y-10 );
+//		}
 		
 		
 		
