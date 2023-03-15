@@ -15,28 +15,41 @@ public class Driver extends JPanel implements ActionListener {
 
 	public void paint(Graphics g) {
 		super.paintComponent(g);
-		rings(g, 200, 0, 0);
-
+		clover(g, 200, 0, 0);
+		//rings(g, 200, 300, 400);
+		
 
 	}// end of paint method - put code above for anything dealing with drawing -
-	
-	public void squares(Graphics g, int len, int x, int y) {
+	public void rings(Graphics g, int radius, int x, int y) {
+		// each method call draws one part of the fractal
+		g.drawOval(x, y, radius, radius);
+		if(x != 350) {
+			rings(g, radius, x+10, y-10 );
+		}
+		
+		
 		
 	}
 
 	public void clover(Graphics g, int radius, int x, int y) {
-
-	
-
-	}
-
-	public void rings(Graphics g, int radius, int x, int y) {
-		// each method call draws one part of the fractal
+		//top left
 		g.drawOval(x, y, radius, radius);
+		g.drawOval(radius*2, radius*2, radius, radius);
 		if(radius > 1) {
-			rings(g, radius-10, x+5, y+5);
+			clover(g, radius-10, x+10, y+10);
+			
 		}
+		//top right
+		
 	}
+	public void triangles(Graphics g, int side) {
+		
+	}
+
+	public void squares(Graphics g, int len, int x, int y) {
+		
+	}
+	
 
 	/**
 	 * Update the positions of the ball and paddle. Update the scores, counter
