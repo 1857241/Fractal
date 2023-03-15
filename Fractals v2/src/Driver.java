@@ -15,10 +15,10 @@ public class Driver extends JPanel implements ActionListener {
 
 	public void paint(Graphics g) {
 		super.paintComponent(g);
-		//clover(g, 200, 0, 0);
-		//clover2(g, 200, 200, 0);
-		//clover3(g, 200, 0, 200);
-		//clover4(g, 200, 200, 200);
+		clover(g, 200, 0, 0);
+		clover2(g, 200, 200, 0);
+		clover3(g, 200, 0, 200);
+		clover4(g, 200, 200, 200);
 
 
 		//rings(g, 200, 300, 400);
@@ -71,7 +71,7 @@ public class Driver extends JPanel implements ActionListener {
 			clover3(g, radius-10, x+10, y);
 			
 		}
-		//top right 
+		//top right
 		
 		
 	}
@@ -93,7 +93,7 @@ public class Driver extends JPanel implements ActionListener {
 	}
 
 	public void squares(Graphics g, int len, int x, int y) {
-		g.drawRect(x, y, x, y);
+	
 	}
 	
 
